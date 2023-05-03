@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="cancion_tree_view">
+      <field name="name">cancion.tree</field>
+      <field name="model">cancion</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id_cancion"/>
+          <field name="id_artista"/>
+          <field name="id_lista"/>
+          <field name="nombre"/>
+          <field name="descripcion"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="cancion_form_view">
+      <field name="name">cancion.form</field>
+      <field name="model">cancion</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="id_cancion"/>
+              <field name="id_artista"/>
+              <field name="id_lista"/>
+              <field name="nombre"/>
+              <field name="descripcion"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="cancion_act_window">
+      <field name="name">Canciones</field>
+      <field name="res_model">cancion</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Crea una nueva canción
+        </p>
+      </field>
+    </record>
+    
+    <menuitem id="cancion_menu" name="Canciones"/>
+    <menuitem id="cancion_submenu" name="Gestión de canciones" parent="cancion_menu" action="cancion_act_window"/>
+
+  </data>
+</odoo>

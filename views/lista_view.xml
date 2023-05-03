@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="lista_tree_view">
+      <field name="name">lista.tree</field>
+      <field name="model">lista</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id_lista"/>
+          <field name="nom"/>
+          <field name="lista"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="lista_form_view">
+      <field name="name">lista.form</field>
+      <field name="model">lista</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="id_lista"/>
+              <field name="nom"/>
+              <field name="lista"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="lista_act_window">
+      <field name="name">Listas</field>
+      <field name="res_model">lista</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Crea una nueva lista
+        </p>
+      </field>
+    </record>
+
+    <menuitem id="main_menu" name="Tu Playlist"/>
+    <menuitem id="lista_menu" name="Listas" parent="main_menu"/>
+    <menuitem id="lista_submenu" name="Gestión de listas" parent="lista_menu" action="lista_act_window"/>
+
+  </data>
+</odoo>

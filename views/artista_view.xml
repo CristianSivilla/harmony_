@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="artista_tree_view">
+      <field name="name">artista.tree</field>
+      <field name="model">artista</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="nacionalidad"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="artista_form_view">
+      <field name="name">artista.form</field>
+      <field name="model">artista</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="id_artista"/>
+              <field name="nombre"/>
+              <field name="nacionalidad"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="artista_act_window">
+      <field name="name">Artistas</field>
+      <field name="res_model">artista</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Crea un nuevo artista
+        </p>
+      </field>
+    </record>
+    
+    <menuitem id="artista_menu" name="Artistas"/>
+    <menuitem id="artista_submenu" name="Gestión de artistas" parent="artista_menu" action="artista_act_window"/>
+
+  </data>
+</odoo>
