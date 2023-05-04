@@ -44,8 +44,8 @@
       </field>
     </record>
     
-    <menuitem id="cancion_menu" name="Canciones"/>
-    <menuitem id="cancion_submenu" name="Gestión de canciones" parent="cancion_menu" action="cancion_act_window"/>
+    <menuitem id="harmony_menu" name="Harmony"/>
+    <menuitem id="cancion_submenu" name="Gestión de canciones" parent="harmony_menu" action="cancion_act_window"/>
 
   </data>
 </odoo>

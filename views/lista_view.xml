@@ -9,6 +9,7 @@
           <field name="id_lista"/>
           <field name="nom"/>
           <field name="lista"/>
+          <field name="canciones" mode="kanban"/>
         </tree>
       </field>
     </record>
@@ -24,6 +25,18 @@
               <field name="nom"/>
               <field name="lista"/>
             </group>
+            <notebook>
+              <page string="Canciones">
+                <field name="canciones" mode="tree">
+                  <tree>
+                    <field name="id_cancion"/>
+                    <field name="nombre"/>
+                    <field name="descripcion"/>
+                    <field name="id_artista"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
           </sheet>
         </form>
       </field>
@@ -40,9 +53,9 @@
       </field>
     </record>
 
-    <menuitem id="main_menu" name="Tu Playlist"/>
-    <menuitem id="lista_menu" name="Listas" parent="main_menu"/>
-    <menuitem id="lista_submenu" name="Gestión de listas" parent="lista_menu" action="lista_act_window"/>
+    <menuitem id="harmony_menu" name="Harmony"/>
+    <menuitem id="lista_submenu" name="Tu PlayList" parent="harmony_menu" action="lista_act_window"/>
+
 
   </data>
 </odoo>

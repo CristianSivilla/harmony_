@@ -40,8 +40,8 @@
       </field>
     </record>
     
-    <menuitem id="artista_menu" name="Artistas"/>
-    <menuitem id="artista_submenu" name="Gestión de artistas" parent="artista_menu" action="artista_act_window"/>
+    <menuitem id="harmony_menu" name="Harmony"/>
+    <menuitem id="artista_submenu" name="Gestión de artistas" parent="harmony_menu" action="artista_act_window"/>
 
   </data>
 </odoo>
