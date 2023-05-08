@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="grupo_gestor_playlist" model="res.groups">
+            <field name="name">Gestor de playlist</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+          <record id="grupo_gestor_artista" model="res.groups">
+            <field name="name">Gestor de artista</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="grupo_gestor_cancion" model="res.groups">
+            <field name="name">Gestor de canción</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+            <record id="grupo_creator_playlist" model="res.groups">
+            <field name="name">Colaborador de playlist</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+          <record id="grupo_creator_artista" model="res.groups">
+            <field name="name">Colaborador de artista</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="grupo_creator_cancion" model="res.groups">
+            <field name="name">Colaborador de canción</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+          <record id="grupo_ver_playlist" model="res.groups">
+            <field name="name">Oyente de playlist</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+    </data>
+</odoo>

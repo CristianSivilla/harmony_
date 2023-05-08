@@ -1,2 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_harmony_harmony,harmony.harmony,model_harmony_harmony,,0,0,0,0
+access_gestor_playlist,Access for Gestor de playlist,model_lista,grupo_gestor_playlist,1,1,1,1
+access_gestor_artista,Access for Gestor de artista,model_artista,grupo_gestor_artista,1,1,1,1
+access_gestor_cancion,Access for Gestor de canción,model_cancion,grupo_gestor_cancion,1,1,1,1
+access_creator_playlist,Access for Creator de playlist,model_lista,grupo_creator_playlist,1,0,1,1
+access_creator_artista,Access for Creator de artista,model_artista,grupo_creator_artista,1,0,1,1
+access_creator_cancion,Access for Creator de canción,model_cancion,grupo_creator_cancion,1,0,1,1
+access_ver_cancion,Access for Oyente de playlist,model_lista,grupo_ver_playlist,1,0,0,0
+

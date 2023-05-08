@@ -41,7 +41,7 @@
     </record>
     
     <menuitem id="harmony_menu" name="Harmony"/>
-    <menuitem id="artista_submenu" name="Gestión de artistas" parent="harmony_menu" action="artista_act_window"/>
+    <menuitem id="artista_submenu" name="Artistas" parent="harmony_menu" action="artista_act_window"/>
 
   </data>
 </odoo>
