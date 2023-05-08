@@ -7,6 +7,7 @@ class Artista(models.Model):
     id_artista = fields.Integer(string='Id_Artista', required=True, index=True, help='Id del artista', default=1, store=True)
     nombre = fields.Char(string='Nombre', required=True, help='Nombre del artista')
     nacionalidad = fields.Char(string='Nacionalidad', help='Nacionalidad del artista')
+    
 
     @api.constrains('nombre')
     def _check_nombre(self):
@@ -20,8 +21,3 @@ class Artista(models.Model):
             if not record.nacionalidad.isalpha():
                 raise exceptions.ValidationError("La nacionalidad del artista , ha de ser un texto.")
 
-    @api.constrains('id_artista')
-    def _check_id_artista(self):
-        for record in self:
-            if not str(record.id_artista).isdigit():
-                raise exceptions.ValidationError("El id del artista, ha de ser un número.")
